@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="01/02/24||02:00:15" using="Simscape Multibody Link Version 7.4" from="SolidWorks 30.0.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="RIP" uid="RIP" version="142">
+<AssemblyFile name="RIP.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="Pendulum-2" uid="Pendulum-2" entityUid="Pendulum*:*Default">
+<Transform>
+<Rotation>1 0 0 0 -1 0 0 0 -1</Rotation>
+<Translation>-0.095352530449893128 0.25856300000000021 0.084749999999999992</Translation>
+</Transform>
+</Instance>
+<Instance name="Encoder-1" uid="Encoder-1" entityUid="Encoder*:*Default">
+<Transform>
+<Rotation>0.85081271681682158 0 -0.52546904847267517 1.8540421179204324e-16 1 2.367130728401792e-16 0.52546904847267517 -2.9882266736240166e-16 0.85081271681682158</Rotation>
+<Translation>0.031889879608284849 -0.0014499999999999212 0.05717712410783371</Translation>
+</Transform>
+</Instance>
+<Instance name="P_Base-1" uid="P_Base-1" grounded="true" entityUid="P_Base*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concentric1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Encoder-1</Uid>
+</InstancePath>
+<Position>-0.084749999999999964 0.21050000000000013 0.084749999999999936</Position>
+<Axis>-5.028703313680176e-16 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>P_Base-1</Uid>
+</InstancePath>
+<Position>-0.08475000000000002 0.19205000000000022 0.08475000000000002</Position>
+<Axis>4.9960036108132044e-16 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Distance name="Distance1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>P_Base-1</Uid>
+</InstancePath>
+<Position>-0.084750000000000006 0.20705000000000023 0.08475000000000002</Position>
+<Axis>4.9960036108132044e-16 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Encoder-1</Uid>
+</InstancePath>
+<Position>-0.08474999999999995 0.19800000000000012 0.084749999999999936</Position>
+<Axis>-5.028703313680176e-16 -1 0</Axis>
+</ConstraintGeometry>
+</Distance>
+<Concentric name="Concentric2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Encoder-1</Uid>
+</InstancePath>
+<Position>-0.091218329586756158 0.26001300000000016 0.08874489444148978</Position>
+<Axis>0.85081271681682158 -4.2763865169823444e-16 -0.52546904847267517</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Pendulum-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Encoder-1</Uid>
+</InstancePath>
+<Position>-0.10227889490537485 0.25976300000000019 0.095575992071634586</Position>
+<Axis>-0.85081271681682158 4.2763865169823444e-16 0.52546904847267517</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Pendulum-2</Uid>
+</InstancePath>
+<Position>-0.009999999999999995 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="Encoder" uid="Encoder*:*Default" version="111">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Encoder.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.4025337305870562</Mass>
+<CenterOfMass>-0.085613666102398581 0.098040735140928897 0.085871025241702204</CenterOfMass>
+<Inertia>0.017476668129541181 0.011571855931979156 0.017348076864100725 -0.00077456300822635951 -4.4959599913791042e-05 -0.00011406087037636842</Inertia>
+</MassProperties>
+<GeometryFile name="Encoder_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="P_Base" uid="P_Base*:*Default" version="169">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="P_Base.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.3610741358550258</Mass>
+<CenterOfMass>-0.085836670554596609 0.095196574853426377 0.086021578576820107</CenterOfMass>
+<Inertia>0.016359142547603751 0.011553364381709978 0.016226390269839731 -0.00083315026710749579 -5.0104260596476906e-05 -2.7279520942326858e-05</Inertia>
+</MassProperties>
+<GeometryFile name="P_Base_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Pendulum" uid="Pendulum*:*Default" version="135">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Pendulum.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.034748962398193424</Mass>
+<CenterOfMass>-0.10930868361343232 0.04689432676626612 2.9524134490813075e-07</CenterOfMass>
+<Inertia>0.00010873777393184209 6.5722245953586089e-05 0.00017383169184268381 4.0113765513982296e-10 -3.4908533825907707e-10 5.0027532951043432e-05</Inertia>
+</MassProperties>
+<GeometryFile name="Pendulum_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
